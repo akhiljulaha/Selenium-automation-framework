@@ -32,7 +32,7 @@ public class LoginPage {                   //never extends the loginPagetest
 	private By registerLink = By.linkText("Register");    // this locator for register page test case
 
 	// 3 public page actions/mehods
-	@Step("getting login page title")
+	@Step("getting login page titlessssssss")
 	public String getLoginPageTitle() {
 		return eleUtil.waitForTitleIsAndCapture(AppConstants.LOGIN_PAGE_TITLE_VALUE, AppConstants.SHORT_DEFAULT_WAIT);
 	}
