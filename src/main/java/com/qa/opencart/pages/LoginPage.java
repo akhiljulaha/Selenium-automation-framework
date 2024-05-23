@@ -26,7 +26,7 @@ public class LoginPage {                   //never extends the loginPagetest
 	private By emailId = By.id("input-email");    // loactors are very sensitive so declared private
 	private By password = By.id("input-password");
 	private By loginBtn = By.xpath("//input[@value='Login']");
-	private By forgotPwdlink = By.linkText("Forgotten Password11");
+	private By forgotPwdlink = By.linkText("Forgotten Password");
 	private By footerLinks = By.xpath("//footer//a");
 	private By loginErrorMessg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 	private By registerLink = By.linkText("Register");    // this locator for register page test case
