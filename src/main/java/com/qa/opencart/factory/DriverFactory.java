@@ -25,7 +25,7 @@ public class DriverFactory {
 //			String browserName = prop.getProperty("browser").trim();       //1
 //			String browserName = System.getProperty("browser");       //2
 			String browserName = System.getProperty("browser"); //2
-			if (browserName.equals(null))
+			if (browserName == null)
 			{
 				 browserName = prop.getProperty("browser").trim();       //1
 			}
