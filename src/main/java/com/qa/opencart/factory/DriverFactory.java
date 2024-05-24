@@ -22,9 +22,9 @@ public class DriverFactory {
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>(); 
 		
 		public WebDriver initDriver(Properties prop){   //passing the object referance	
-			String browserName = prop.getProperty("browser").trim();       //1
-//			String browserName = System.getProperty("browser");       //2
-			System.out.println("browser name is : "+ browserName);
+//			String browserName = prop.getProperty("browser").trim();       //1
+			String browserName = System.getProperty("browser");       //2
+			System.out.println("browser name issssss : "+ browserName);
 			highlightElement = prop.getProperty("highlight");
 			
 			optionsManager = new OptionsManager(prop);
@@ -141,24 +141,6 @@ public class DriverFactory {
 /*
  * FileInputStream > It will create the coonnection with the . properties file, once connection is 
  * established and the load the properties eith the help of prop(ref)   -> pass the file ref
- * 
- * 
- * 
-
-  public Properties initProp() {
-		Properties prop = new Properties();  // design to intract with .propeties file
-		try {
-			FileInputStream ip = new FileInputStream("./src/main/resources/confiq/confiq.properties");
-		    try {
-				prop.load(ip);   // while loading the property any exception will come then 2 nd try catch will handle 
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		return prop;
-	}
 // thread local > is good option if you using parllel execution
  * if 2 to 4 parllel execution are there then that is fine but when so many parlel excection the use TL
  * TL >Give me a local copy of the driver for each and every thread without any dead lock codition
