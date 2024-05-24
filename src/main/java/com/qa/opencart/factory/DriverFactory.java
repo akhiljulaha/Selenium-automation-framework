@@ -23,7 +23,12 @@ public class DriverFactory {
 		
 		public WebDriver initDriver(Properties prop){   //passing the object referance	
 //			String browserName = prop.getProperty("browser").trim();       //1
-			String browserName = System.getProperty("browser");       //2
+//			String browserName = System.getProperty("browser");       //2
+			String browserName = System.getProperty("browser"); //2
+			if (browserName.equals(null))
+			{
+				 browserName = prop.getProperty("browser").trim();       //1
+			}
 			System.out.println("browser name issssss : "+ browserName);
 			highlightElement = prop.getProperty("highlight");
 			
