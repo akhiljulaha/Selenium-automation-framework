@@ -71,7 +71,9 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/main/resources/testrunners/testng.xml</suiteXmlFile>
+					<!-- <suiteXmlFile>src/main/resources/testrunners/testng.xml</suiteXmlFile> -->
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile> 
+
 					</suiteXmlFiles>
 						<argLine>
                             -javaagent:"C:\Users\DELL\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar"
